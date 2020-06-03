@@ -60,7 +60,7 @@ A **pivot** is a nonzero number in a pivot position that is used as needed to cr
 The variables corresponding to the pivot columns in the matrix are called **basic** variables. The other variables are called **free** variables.
 
 **Existence and Uniqueness Theorem**\
-A linear system is consistent if and only if the rightmost column of the augmented matrix is not a pivot column - that is, if and only if an echelon form of the augmented matrix has no row of the form [0 ... 0 b] with b nonzero. If a linear system is consistent, then the solution set contains either (i) a unique solution, when there are no free variables, or (ii) infinitely many solutions, when there is at least one free variable.
+A linear system is consistent if and only if the rightmost column of the augmented matrix is *not* a pivot column - that is, if and only if an echelon form of the augmented matrix has no row of the form [0 ... 0 b] with b nonzero. If a linear system is consistent, then the solution set contains either (i) a unique solution, when there are no free variables, or (ii) infinitely many solutions, when there is at least one free variable.
 
 
 ## 1.3 Vector Equations
@@ -172,7 +172,7 @@ Let *A* be an *n* x *n* matrix, let *U* be any echelon form obtained from *A* by
 
 **Properties of Determinants**\
 Let *A* and *B* be *n* x *n* matrices.\
-a. *A* is invertible if and only if det *A* is not 0.\
+a. *A* is invertible if and only if det *A* is *not* 0.\
 b. det *AB* = (det *A*)(det *B*).\
 c. det *A<sup>T</sup>* = det *A*.\
 d. If *A* is triangular, then det *A* is the product of the entries on the main diagonal of *A*.\
@@ -238,14 +238,14 @@ The **range** of *T* is the set of all vectors in *W* of the form *T(x)* for som
 
 ## 4.3 Linearly Independent Sets; Bases
 
-An indexed set {**v<sub>1</sub>**, ..., **v<sub>p</sub>**} of two or more vectors, with **v<sub>1</sub>** not equal to 0 is lnearly dependent if and only if some **v<sub>j</sub>** (with *j* > 1) is a linear combination of the preceding vectors, **v<sub>1</sub>**, ..., **v<sub>j-1</sub>**.
+An indexed set {**v<sub>1</sub>**, ..., **v<sub>p</sub>**} of two or more vectors, with **v<sub>1</sub>** *not* equal to 0 is lnearly dependent if and only if some **v<sub>j</sub>** (with *j* > 1) is a linear combination of the preceding vectors, **v<sub>1</sub>**, ..., **v<sub>j-1</sub>**.
 
 Let *H* be a subspace of vector space *V*. An indexed set of vectors *B* = {**b<sub>1</sub>**, ..., **b<sub>p</sub>**} in *V* is a **basis** for *H* if (i) *B* is a linearly independent set, and (ii) the subspace spanned by *B* coincides with *H*; that is, *H* = span{**b<sub>1</sub>**, ..., **b<sub>p</sub>**}.
 
 **The Spanning Set Theorem**\
 Let *S* = {**v<sub>1</sub>**, ..., **v<sub>p</sub>**} be a set in *V*, and let *H* = span{**v<sub>1</sub>**, ..., **v<sub>p<sub>**}.\
 a. If one of the vectors in *S* - say, **v<sub>k</sub>** - is a linear combination of the remaining vectors in *S*, then the set formed from *S* by removing **v<sub>k</sub>** still spans *H*.\
-b. IF *H* not equal to {0}, some subset of *S* is a basis for *H*.
+b. IF *H* *not* equal to {0}, some subset of *S* is a basis for *H*.
 
 The pivot columns of a matrix *A* form a basis for Col *A*.
 
