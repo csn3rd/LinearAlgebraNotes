@@ -43,8 +43,8 @@ A rectangular matrix is in **echelon form** (or **row echelon form**) if it has 
 2. Each leading entry of a row is in a column to the right of the leading entry of the row above it.
 3. All entries in a column below a leading entry are zeros.
 
-If a matrix in echelon form satisfies the following additional conditions, then it is in **reduced echelon form** (or **reduced row echelon form**):
-4. The leading entry in each nonzero row is 1.
+If a matrix in echelon form satisfies the following additional conditions, then it is in **reduced echelon form** (or **reduced row echelon form**):\
+4. The leading entry in each nonzero row is 1.\
 5. Each leading 1 is the only nonzero entry in its column.
 
 Any nonzero matrix may be **row reduced** (that is, transformed by elementary row operations) into more than one matrix in echelon form, using different sequences of row operations.
@@ -75,14 +75,14 @@ If *n* is a positive integer, R<sup>n</sup> (read "r-n") denotes the collection 
 The vector whose entries are all zero is called the **zero vector** and is denoted by 0.
 
 **Algebraic Properties of R<sup>n</sup>**
-For all *u*, *v*, *w*, in R<sup>n</sup> and all scalars *c* and *d*:
-(i) u + v = v + u
-(ii) (u + v) + w = u + (v + w)
-(iii) u + 0 = 0 + u = u
-(iv) u + (-u) = -u + u = 0 where -u denotes (-1)u
-(v) c(u + v) = cu + cv
-(vi) (c + d)u = cu + du
-(vii) c(du) = (cd)u
+For all *u*, *v*, *w*, in R<sup>n</sup> and all scalars *c* and *d*:\
+(i) u + v = v + u\
+(ii) (u + v) + w = u + (v + w)\
+(iii) u + 0 = 0 + u = u\
+(iv) u + (-u) = -u + u = 0 where -u denotes (-1)u\
+(v) c(u + v) = cu + cv\
+(vi) (c + d)u = cu + du\
+(vii) c(du) = (cd)u\
 (viii) 1u = u
 
 Given vectors v<sub>1</sub>, v<sub>2</sub>, ..., v<sub>p</sub> in R<sup>n</sup> and given scalars c<sub>1</sub>, c<sub>2</sub>, ..., c<sub>p</sub>, the vector *y* defined by y = c<sub>1</sub>v<sub>1</sub> + ... c<sub>p</sub>v<sub>p</sub> is called a **linear combination** of v<sub>1</sub>, ..., v<sub>p</sub> with weights c<sub>1</sub>, ..., c<sub>p</sub>.
@@ -101,9 +101,9 @@ Let T : R<sup>n</sup> -> R<sup>n</sup> be a linear transformation and let A be t
 
 ## 2.8 Subspaces of R<sup>n</sup>
 
-A **subspace** of R<sup>n</sup> is any set *H* in R<sup>n</sup> that has three properties:
-a. The zero vector is in *H*.
-b. For each *u* and *v* in *H*, the sum *u+v* is in *H*.
+A **subspace** of R<sup>n</sup> is any set *H* in R<sup>n</sup> that has three properties:\
+a. The zero vector is in *H*.\
+b. For each *u* and *v* in *H*, the sum *u+v* is in *H*.\
 c. For each *u* in *H* and scalar *c*, the vector *cu* is in *H*.
 
 The **column space** of a matrix *A* is the set Col *A* of all linear combinations of the columns of *A*.
@@ -146,11 +146,11 @@ If **v<sub>1</sub>**, ..., **v<sub>r</sub>** are eigenvectors that correspond to
 Let *A* be an *n* x *n* matrix, let *U* be any echelon form obtained from *A* by row replacements and row interchanges (without scaling), and let *r* be the number of such row interchanges. Then the **determinant** of *A*, written as det *A*, is (-1)<sup>r</sup> times the product of the diagonal entries *u<sub>11</sub>*, ..., *u<sub>nn</sub>*. If A is invertible, then the determinant is nonzero because the diagonal entries are all pivots.
 
 **Properties of Determinants**
-Let *A* and *B* be *n* x *n* matrices.
-a. *A* is invertible if and only if det *A* is not 0.
-b. det *AB* = (det *A*)(det *B*).
-c. det *A<sup>T</sup>* = det *A*.
-d. If *A* is triangular, then det *A* is the product of the entries on the main diagonal of *A*.
+Let *A* and *B* be *n* x *n* matrices.\
+a. *A* is invertible if and only if det *A* is not 0.\
+b. det *AB* = (det *A*)(det *B*).\
+c. det *A<sup>T</sup>* = det *A*.\
+d. If *A* is triangular, then det *A* is the product of the entries on the main diagonal of *A*.\
 e. A row replacement operation on *A* does not change the determinant. A row interchange changes the sign of the determinant. A row scaling also scales the determinant by the same scalar factor.
 
 A scalar λ is an eigenvalue of an *n* x *n* matrix *A* if and only if λ satisfies the characteristic equation det(*A*-λI) = 0.
@@ -171,14 +171,71 @@ An *n* x *n* matrix *A* is diagonalizable if and only if *A* has *n* linearly in
 
 An *n* x *n* matrix with *n* distinct eigenvalues is diagonalizable.
 
-Let *A* be an *n* x *n* matrix whose distinct eigenvalues are λ<sub>1</sub>, ..., λ<sub>p</sub>.
-a. For 1 <= *k* <= *p*, the dimensions of the eigenspace for λ<sub>k</sub> is less than or equal to the multiplicity of he eigenvalue λ<sub>k</sub>.
-b. The matrix *A* is diagonalizable if and only if the sum of the dimensions of the eigenspaces equals *n*, and this happens if and only if (i) the characteristic polynomial factors completely into linear factors and (ii) the dimension of the eigenspace for each λ<sub>k</sub> equals the multiplicity of λ<sub>k</sub>.
+Let *A* be an *n* x *n* matrix whose distinct eigenvalues are λ<sub>1</sub>, ..., λ<sub>p</sub>.\
+a. For 1 <= *k* <= *p*, the dimensions of the eigenspace for λ<sub>k</sub> is less than or equal to the multiplicity of he eigenvalue λ<sub>k</sub>.\
+b. The matrix *A* is diagonalizable if and only if the sum of the dimensions of the eigenspaces equals *n*, and this happens if and only if (i) the characteristic polynomial factors completely into linear factors and (ii) the dimension of the eigenspace for each λ<sub>k</sub> equals the multiplicity of λ<sub>k</sub>.\
 c. If *A* is diagonalizable and *B<sub>k</sub>* is a basis for the eigenspace corresponding to λ<sub>k</sub> for each *k*, then the total collection of vectors in the set *B<sub>1</sub>*, ..., *B<sub>p</sub>* forms an eigenvector basis for R<sup>n</sup>.
 
 
+## 4.1 Vector Spaces and Subspaces
+
+A **vector space** is a nonempty set *V* of objects, called *vectors*, on which are defined two operations, called *addition* and *multiplication by scalars*, subject to 10 axioms (or rules) listed below. The axioms must hold for all vectors **u**, **v**, and **w** in *V* and for all scalars *c* and *d*.
+1. The sum of *u* and *v*, denoted by *u+v*, is in *V*.
+2. *u* + *v* = *v* + *u*.
+3. (*u* + *v*) + *w* = *u* + (*v* + *w*).
+4. There is a zero vector 0 in *V* such that *u* + 0 = *u*.
+5. For each *u* in *V*, there is a vector *-u* in *V* such that *u* + (*-u*) = 0.
+6. The scalar multiple of *u* by *c*, denoted by *cu*, is in *V*.
+7. *c*(*u* + *v*) = *cu* + *cv*.
+8. (*c* + *d*)*u* = *cu* + *du*.
+9. *c*(*du*) = (*cd*)*u*.
+10. 1*u* = *u*.
+
+A **subspace** of a vector space *V* is a subset *H* of *V* that has three properties:\
+a. The zero vector of *V* is in *H*.\
+b. *H* is closed under vector addition.\
+c. *H* is closed under scalar multiplication.
+
+If **v<sub>1</sub>**, ..., **v<sub>p</sub>** are in a vector space *V*, then span{**v<sub>1</sub>**, ..., **v<sub>p</sub>**} is a subspace of *V*.
+
+## 4.2 Null Spaces, Column Spaces, and Linear Transformations
+
+The **null space** of an *m* x *n* matrix *A*, written as Nul *A*, is the set of all solutions of the homogeneous equation *Ax* = 0. In set notation, Nul *A* = {*x*: *x* in R<sup>n</sup> and *Ax* = 0}. The null space is a subspace of R<sup>n</sup>. Equivalently, the set of all solutions of a system *A*x = 0 of *m* homogeneous linear equations in *n* unknowns is a subspace of R<sup>n</sup>.
+
+The **column space** of an *m* x *n* matrix *A*, written as Col *A*, is the set of all linear combinations of the columns of *A*. If *A* = [**a<sub>1</sub>** ... **a<sub>n</sub>**], then Col *A* = span{**a<sub>1</sub>**, ..., **a<sub>n</sub>**}. The column spaces is a subspace of R<sup>m</sup>. The column space is all of R<sup>m</sup> if and only if the equation *Ax* = *b* has a solution for each *b* in R<sup>m</sup>.
+
+A **linear transformation** *T* from a vector space *V* to a vector space *W* is a rule that assigns to each vector *x* in *V* a unique vector *T(x)* in *W*, such that (i) *T(u + v)* = *T(u)* + *T(v)* for all *u*, *v*, in *V*, and (ii) *T(cu)* = *cT(u)* for all *u* in *V* and all scalars *c*.
+
+The **kernal** (or **null space**) of such a *T* is the set of all *u* in *V* such that *T(u)* = 0.
+
+The **range** of *T* is the set of all vectors in *W* of the form *T(x)* for some *x* in *V*.
 
 
+## 4.3 Linearly Independent Sets; Bases
+
+An indexed set {**v<sub>1</sub>**, ..., **v<sub>p</sub>**} of two or more vectors, with **v<sub>1</sub>** not equal to 0 is lnearly dependent if and only if some **v<sub>j</sub>** (with *j* > 1) is a linear combination of the preceding vectors, **v<sub>1</sub>**, ..., **v<sub>j-1</sub>**.
+
+Let *H* be a subspace of vector space *V*. An indexed set of vectors *B* = {**b<sub>1</sub>**, ..., **b<sub>p</sub>**} in *V* is a **basis** for *H* if (i) *B* is a linearly independent set, and (ii) the subspace spanned by *B* coincides with *H*; that is, *H* = span{**b<sub>1</sub>**, ..., **b<sub>p</sub>**}.
+
+**The Spanning Set Theorem**
+
+Let *S* = {**v<sub>1</sub>**, ..., **v<sub>p</sub>**} be a set in *V*, and let *H* = span{**v<sub>1</sub>**, ..., **v<sub>p<sub>**}.\
+a. If one of the vectors in *S* - say, **v<sub>k</sub>** - is a linear combination of the remaining vectors in *S*, then the set formed from *S* by removing **v<sub>k</sub>** still spans *H*.\
+b. IF *H* not equal to {0}, some subset of *S* is a basis for *H*.
+
+The pivot columns of a matrix *A* form a basis for Col *A*.
+
+
+## 4.4 Coordinate Systems
+
+**The Unique Representation Theorem**
+Let *B* = {**b<sub>1</sub>**, ..., **b<sub>n</sub>**} be a basis for a vector space *V*. Then for each *x* in *V*, there exists a unique set of scalars c<sub>1</sub>, ..., c<sub>n</sub> such that *x* = c<sub>1</sub>**b<sub>1</sub>** + ... + c<sub>n</sub>**b<sub>n</sub>**. The **coordinates of x relative to the basis *B*** (or the ***B*-coordinates of x**) are the weights c<sub>1</sub>, ..., c<sub>n</sub>.
+
+Let *B* = {**b<sub>1</sub>**, ..., **b<sub>n</sub>**} be a basis for a vector space *V*. Then the coordinate mapping *x* -> [*x*]<sub>*B*</sub> is a one-to-one linear transformation from *V* onto R<sub>n</sub>.
+
+In general, a one-to-one linear transformation from a vector space *V* to a vector space *W* is called an **isomorphism** from *V* to *W*.
+
+## Overarching
 
 **The Invertible Matrix Theorem**
 Let *A* be a *n* x *n* matrix. Then, the following statements are equivalent.
