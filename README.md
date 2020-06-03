@@ -1,5 +1,5 @@
 # LinearAlgebra
-Theorems and Definitions from 1.1, 1.2, 1.3, ~~1.4, 1.5, 1.7, 1.8, 1.9, 2.1, 2.2,~~ 2.3, 2.8, 2.9, ~~3.1, 3.2,~~ 5.1, 5.2, 5.3, 4.1, 4.2, 4.3, 4.4
+Theorems and Definitions from 1.1, 1.2, 1.3, ~~1.4, 1.5, 1.7, 1.8, 1.9, 2.1, 2.2,~~ 2.3, 2.8, 2.9, 3.1, 3.2, 5.1, 5.2, 5.3, 4.1, 4.2, 4.3, 4.4
 
 
 ## 1.1 Systems of Linear Equations
@@ -131,6 +131,30 @@ If a matrix *A* has *n* columns, then rank *A* + dim Nul *A* = *n*.
 
 **The Basis Theorem**\
 Let *H* be a *p*-dimensional subspace of R<sup>n</sup>. Any linearly independent set of exactly *p* elements in *H* is automatically a basis for *H*. Also, any set of *p* elements of *H* that spans *H* is automatically a basis for *H*.
+
+
+## 3.1 Introduction to Determinants
+
+For n >= 2, the **determinant** of an *n* x *n* matrix *A* = [a<sub>ij</sub>] is the sum of *n* terms of the form +-a<sub>1j</sub> det *A<sub>1j</sub>*, with plus and minus signs alternating, where the entries a<sub>11</sub>, a<sub>12</sub>, ..., a<sub>1n</sub> are from the first rows of *A*. In symbols, det *A* = a<sub>11</sub> det *A<sub>11</sub>* - a<sub>12</sub> det *A<sub>12</sub>* + ... + (-1)<sup>(1+n)</sup> a<sub>1n</sub> det *A<sub>1n</sub>* = sum from j = 1 to n of (-1)<sup>(1+j)</sup> a<sub>1j</sub> det *A<sub>1j</sub>*.
+
+Given *A* = [a<sub>ij</sub>], the **(i, j) - cofactor** of A is the  number C<sub>ij</sub> given by C<sub>ij</sub> = (-1)<sup>(i+j)</sup> det *A<sub>ij</sub>*. The determinant of an *n* x *n* matrix *A* can be computed by a cofactor expansion across any row or down any column. The expansion across the *i*th row is det *A* = a<sub>i1</sub>*C<sub>i1</sub>* + a<sub>i2</sub>*C<sub>i2</sub>* + ... + a<sub>in</sub>*C<sub>in</sub>*. The expansion across the *j*th column is det *A* = a<sub>1j</sub>*C<sub>1j</sub>* + a<sub>2j</sub>*C<sub>2j</sub>* + ... + a<sub>nj</sub>*C<sub>nj</sub>*.
+
+If *A* is a triangular matrix, then det *A* is the product of the entries on the main diagonal of *A*.
+
+
+## 3.2 Properties of Determinants
+
+**Row Operations**\
+Let *A* be a square matrix.\
+a. If a multiple of one row of *A* is added to another row to produce a matrix *B*, then det *B* = det *A*.\
+b. If two rows of *A* are interchanged to produce *B*, then det *B* = -det *A*.\
+c. If one row of *A* is multiplied by *k* to produce *B*, then det *B* = *k* x det *A*.
+
+A square matrix *A* is invertible if and only if det A is *not* equal to 0.
+
+If *A* is an *n* x *n* matrix, then det *A*<sup>T</sup> = det *A*.
+
+If *A* and *B* are *n* x *n* matrices, then det(*AB*) = det(*A*) x det(*B*).
 
 
 ## 5.1 Eigenvectors and Eigenvalues
