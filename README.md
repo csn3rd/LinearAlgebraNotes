@@ -50,7 +50,7 @@ If a matrix in echelon form satisfies the following additional conditions, then 
 
 Any nonzero matrix may be **row reduced** (that is, transformed by elementary row operations) into more than one matrix in echelon form, using different sequences of row operations.
 
-**Uniqueness of the Reduced Echelon Form**
+**Uniqueness of the Reduced Echelon Form**\
 Each matrix is row equivalent to one and only one reduced echelon matrix.
 
 A **pivot position** in a matrix A is a location in A that corresponds to a leading 1 in the reduced echelon form of A. A **pivot column** is a column of A that contains a pivot position.
