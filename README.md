@@ -240,23 +240,23 @@ In general, a one-to-one linear transformation from a vector space *V* to a vect
 **The Invertible Matrix Theorem**\
 Let *A* be a *n* x *n* matrix. Then, the following statements are equivalent.
 
-a. *A* is an invertible matrix.
-b. *A* is row equivalent to the *n* x *n* identity matrix.
-c. *A* has *n* pivot positions.
-d. The equation *A*x = 0 has only the trivial solution.
-e. The columns of *A* form a linearly independent set.
-f. The linear transformation x -> *A*x is one-to-one.
-g. The equation *A*x = b has at least one solution for each b in R<sup>n</sup>.
-h. The columns of *A* span R<sup>n</sup>.
-i. The linear transformation x -> *A*x maps R<sup>n</sup> onto R<sup>n</sup>.
-j. There is an *n* x *n* matrix C such that C*A* = I.
-k. There is an *n* x *n* matrix D such that *A*D = I.
-l. *A*<sup>T</sup> is an invertible matrix.
-m. The columns of *A* form a basis of R<sup>n</sup>.
-n. Col *A* = R<sup>n</sup>.
-o. dim Col *A* = n.
-p. rank *A* = n.
-q. Nul *A* = {0}.
-r. dim Nul *A* = 0.
-s. The number 0 is *not* an eigenvalue of *A*.
-t. The determinant of *A* is *not* 0.
+a. *A* is an invertible matrix.\
+b. *A* is row equivalent to the *n* x *n* identity matrix.\
+c. *A* has *n* pivot positions.\
+d. The equation *A*x = 0 has only the trivial solution.\
+e. The columns of *A* form a linearly independent set.\
+f. The linear transformation x -> *A*x is one-to-one.\
+g. The equation *A*x = b has at least one solution for each b in R<sup>n</sup>.\
+h. The columns of *A* span R<sup>n</sup>.\
+i. The linear transformation x -> *A*x maps R<sup>n</sup> onto R<sup>n</sup>.\
+j. There is an *n* x *n* matrix C such that C*A* = I.\
+k. There is an *n* x *n* matrix D such that *A*D = I.\
+l. *A*<sup>T</sup> is an invertible matrix.\
+m. The columns of *A* form a basis of R<sup>n</sup>.\
+n. Col *A* = R<sup>n</sup>.\
+o. dim Col *A* = n.\
+p. rank *A* = n.\
+q. Nul *A* = {0}.\
+r. dim Nul *A* = 0.\
+s. The number 0 is *not* an eigenvalue of *A*.\
+t. The determinant of *A* is *not* 0.\
