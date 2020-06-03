@@ -44,6 +44,7 @@ A rectangular matrix is in **echelon form** (or **row echelon form**) if it has 
 3. All entries in a column below a leading entry are zeros.
 
 If a matrix in echelon form satisfies the following additional conditions, then it is in **reduced echelon form** (or **reduced row echelon form**):\
+
 4. The leading entry in each nonzero row is 1.\
 5. Each leading 1 is the only nonzero entry in its column.
 
@@ -58,7 +59,7 @@ A **pivot** is a nonzero number in a pivot position that is used as needed to cr
 
 The variables corresponding to the pivot columns in the matrix are called **basic** variables. The other variables are called **free** variables.
 
-**Existence and Uniqueness Theorem**
+**Existence and Uniqueness Theorem**\
 A linear system is consistent if and only if the rightmost column of the augmented matrix is not a pivot column - that is, if and only if an echelon form of the augmented matrix has no row of the form [0 ... 0 b] with b nonzero. If a linear system is consistent, then the solution set contains either (i) a unique solution, when there are no free variables, or (ii) infinitely many solutions, when there is at least one free variable.
 
 
@@ -74,7 +75,7 @@ If *n* is a positive integer, R<sup>n</sup> (read "r-n") denotes the collection 
 
 The vector whose entries are all zero is called the **zero vector** and is denoted by 0.
 
-**Algebraic Properties of R<sup>n</sup>**
+**Algebraic Properties of R<sup>n</sup>**\
 For all *u*, *v*, *w*, in R<sup>n</sup> and all scalars *c* and *d*:\
 (i) u + v = v + u\
 (ii) (u + v) + w = u + (v + w)\
@@ -125,10 +126,10 @@ The **dimension** of a nonzero subspace *H*, denoted by dim *H*, is the number o
 
 The **rank** of a matrix *A*, denoted by rank *A*, is the dimension of the column space of *A*.
 
-**The Rank Theorem**
+**The Rank Theorem**\
 If a matrix *A* has *n* columns, then rank *A* + dim Nul *A* = *n*.
 
-**The Basis Theorem**
+**The Basis Theorem**\
 Let *H* be a *p*-dimensional subspace of R<sup>n</sup>. Any linearly independent set of exactly *p* elements in *H* is automatically a basis for *H*. Also, any set of *p* elements of *H* that spans *H* is automatically a basis for *H*.
 
 
@@ -145,7 +146,7 @@ If **v<sub>1</sub>**, ..., **v<sub>r</sub>** are eigenvectors that correspond to
 
 Let *A* be an *n* x *n* matrix, let *U* be any echelon form obtained from *A* by row replacements and row interchanges (without scaling), and let *r* be the number of such row interchanges. Then the **determinant** of *A*, written as det *A*, is (-1)<sup>r</sup> times the product of the diagonal entries *u<sub>11</sub>*, ..., *u<sub>nn</sub>*. If A is invertible, then the determinant is nonzero because the diagonal entries are all pivots.
 
-**Properties of Determinants**
+**Properties of Determinants**\
 Let *A* and *B* be *n* x *n* matrices.\
 a. *A* is invertible if and only if det *A* is not 0.\
 b. det *AB* = (det *A*)(det *B*).\
@@ -166,7 +167,7 @@ If *n* x *n* matrices *A* and *B* are similar, then they have the same character
 
 A square matrix *A* is said to be **diagonalizable** if *A* is similar to a diagonal matrix, that is, if *A = PDP<sup>-1</sup>* for some invertible matrix *P* and some diagonal matrix *D*.
 
-**The Diagonalization Theorem**
+**The Diagonalization Theorem**\
 An *n* x *n* matrix *A* is diagonalizable if and only if *A* has *n* linearly independent eigenvectors. In fact, *A = PDP<sup>-1</sup>*, with *D* a diagonal matrix, if and only if the columns of *P* are *n* linearly independent eigenvectors of *A*. In this case, the diagonal entries of *D* are eigenvalues of *A* the correspond to, respectively, to the eigenvectors in *P*. In otherwords, *A* is diagonalizable if and only if there are enough eigenvectors to form a basis for R<sup>n</sup>. We call such a basis an **eigenvector basis** of R<sup>n</sup>.
 
 An *n* x *n* matrix with *n* distinct eigenvalues is diagonalizable.
@@ -217,8 +218,7 @@ An indexed set {**v<sub>1</sub>**, ..., **v<sub>p</sub>**} of two or more vector
 
 Let *H* be a subspace of vector space *V*. An indexed set of vectors *B* = {**b<sub>1</sub>**, ..., **b<sub>p</sub>**} in *V* is a **basis** for *H* if (i) *B* is a linearly independent set, and (ii) the subspace spanned by *B* coincides with *H*; that is, *H* = span{**b<sub>1</sub>**, ..., **b<sub>p</sub>**}.
 
-**The Spanning Set Theorem**
-
+**The Spanning Set Theorem**\
 Let *S* = {**v<sub>1</sub>**, ..., **v<sub>p</sub>**} be a set in *V*, and let *H* = span{**v<sub>1</sub>**, ..., **v<sub>p<sub>**}.\
 a. If one of the vectors in *S* - say, **v<sub>k</sub>** - is a linear combination of the remaining vectors in *S*, then the set formed from *S* by removing **v<sub>k</sub>** still spans *H*.\
 b. IF *H* not equal to {0}, some subset of *S* is a basis for *H*.
@@ -228,7 +228,7 @@ The pivot columns of a matrix *A* form a basis for Col *A*.
 
 ## 4.4 Coordinate Systems
 
-**The Unique Representation Theorem**
+**The Unique Representation Theorem**\
 Let *B* = {**b<sub>1</sub>**, ..., **b<sub>n</sub>**} be a basis for a vector space *V*. Then for each *x* in *V*, there exists a unique set of scalars c<sub>1</sub>, ..., c<sub>n</sub> such that *x* = c<sub>1</sub>**b<sub>1</sub>** + ... + c<sub>n</sub>**b<sub>n</sub>**. The **coordinates of x relative to the basis *B*** (or the ***B*-coordinates of x**) are the weights c<sub>1</sub>, ..., c<sub>n</sub>.
 
 Let *B* = {**b<sub>1</sub>**, ..., **b<sub>n</sub>**} be a basis for a vector space *V*. Then the coordinate mapping *x* -> [*x*]<sub>*B*</sub> is a one-to-one linear transformation from *V* onto R<sub>n</sub>.
@@ -237,7 +237,7 @@ In general, a one-to-one linear transformation from a vector space *V* to a vect
 
 ## Overarching
 
-**The Invertible Matrix Theorem**
+**The Invertible Matrix Theorem**\
 Let *A* be a *n* x *n* matrix. Then, the following statements are equivalent.
 
 a. *A* is an invertible matrix.
