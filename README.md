@@ -259,4 +259,4 @@ p. rank *A* = n.\
 q. Nul *A* = {0}.\
 r. dim Nul *A* = 0.\
 s. The number 0 is *not* an eigenvalue of *A*.\
-t. The determinant of *A* is *not* 0.\
+t. The determinant of *A* is *not* 0.
