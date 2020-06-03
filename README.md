@@ -233,7 +233,7 @@ The **column space** of an *m* x *n* matrix *A*, written as Col *A*, is the set 
 
 A **linear transformation** *T* from a vector space *V* to a vector space *W* is a rule that assigns to each vector *x* in *V* a unique vector *T(x)* in *W*, such that (i) *T(u + v)* = *T(u)* + *T(v)* for all *u*, *v*, in *V*, and (ii) *T(cu)* = *cT(u)* for all *u* in *V* and all scalars *c*.
 
-The **kernal** (or **null space**) of such a *T* is the set of all *u* in *V* such that *T(u)* = 0.
+The **kernel** (or **null space**) of such a *T* is the set of all *u* in *V* such that *T(u)* = 0.
 
 The **range** of *T* is the set of all vectors in *W* of the form *T(x)* for some *x* in *V*.
 
