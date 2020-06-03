@@ -43,9 +43,9 @@ A rectangular matrix is in **echelon form** (or **row echelon form**) if it has 
 2. Each leading entry of a row is in a column to the right of the leading entry of the row above it.
 3. All entries in a column below a leading entry are zeros.
 
-If a matrix in echelon form satisfies the following additional conditions, then it is in **reduced echelon form** (or **reduced row echelon form**):\
+If a matrix in echelon form satisfies the following additional conditions, then it is in **reduced echelon form** (or **reduced row echelon form**):
 
-4. The leading entry in each nonzero row is 1.\
+4. The leading entry in each nonzero row is 1.
 5. Each leading 1 is the only nonzero entry in its column.
 
 Any nonzero matrix may be **row reduced** (that is, transformed by elementary row operations) into more than one matrix in echelon form, using different sequences of row operations.
