@@ -1,7 +1,5 @@
 # Linear Algebra Notes (for SCU MATH53)
-Theorems and Definitions from Sections 1.1, 1.2, 1.3, 1.4, 1.5, 1.7, 1.8, 2.3, 2.8, 2.9, 3.1, 3.2, 5.1, 5.2, 5.3, 4.1, 4.2, 4.3, and 4.4. Sections 1.9, 2.1, and 2.2 have not been formatted yet and will be updated soon. The textbook used is Linear Algebra and its Applications (5th Edition) by David C. Lay, Judi J. McDonald, and Steven R. Lay.
-
-Status: 1.1, 1.2, 1.3, 1.4, 1.5, 1.7, 1.8, ~~1.9, 2.1, 2.2,~~ 2.3, 2.8, 2.9, 3.1, 3.2, 5.1, 5.2, 5.3, 4.1, 4.2, 4.3, 4.4
+Theorems and Definitions from Sections 1.1, 1.2, 1.3, 1.4, 1.5, 1.7, 1.8, 1.9, 2.1, 2.2, 2.3, 2.8, 2.9, 3.1, 3.2, 5.1, 5.2, 5.3, 4.1, 4.2, 4.3, and 4.4. The textbook used is Linear Algebra and its Applications (5th Edition) by David C. Lay, Judi J. McDonald, and Steven R. Lay.
 
 
 ## 1.1 Systems of Linear Equations
@@ -159,7 +157,113 @@ If *T* is a linear transformation, then *T*(**0**) = **0** and *T*(*c***u** + *d
 
 *Repeated action of the above property produces a useful generalization*:\
 *T*(*c*<sub>1</sub>**v<sub>1</sub>** + ... + *c*<sub>p</sub>**v<sub>p</sub>**) = *c*<sub>1</sub>*T*(**v<sub>1</sub>**) + ... + *c*<sub>p</sub>*T*(**v<sub>p</sub>**)\
-<sub>This is sometimes referred to as a *superposition principle*.</sub>
+<sub>Note: This is sometimes referred to as a *superposition principle*.</sub>
+
+
+## 1.9 The Matrix of a Linear Transformation
+
+Let *T* : R<sup>n</sup> → R<sup>m</sup> be a linear transformation. Then there exists a unique matrix *A* such that *T*(**x**) = *A***x** for all **x** in R<sup>n</sup>.\
+In fact, *A* is the *m* x *n* matrix whose *j*th column is the vector *T*(**e**<sub>j</sub>), where **e**<sub>j</sub> is the *j*th column of the identity matrix in R<sup>n</sup>:\
+*A* = [*T*(**e**<sub>1</sub>) ... *T*(**e**<sub>n</sub>) ]. This matrix *A* is called the **standard matrix for the linear transformation** *T*.\
+<sub>Note: The term *linear transformation* focuses on a property of a mapping, while *matrix transformation* describes how such a mapping is implemented.</sub>
+
+A mapping *T*: R<sup>n</sup> → R<sup>m</sup> is said to be **onto** R<sup>m</sup> if each **b** in R<sup>m</sup> is the image of *at least one* **x** in R<sup>n</sup>.
+
+A mapping *T*: R<sup>n</sup> → R<sup>m</sup> is said to be **one-to-one** R<sup>m</sup> if each **b** in R<sup>m</sup> is the image of *at most one* **x** in R<sup>n</sup>.
+
+Let *T*: R<sup>n</sup> → R<sup>m</sup> be a linear transformation. Then *T* is one-to-one if and only if the equation *T*(**x**) = **0** has only the trivial solution.
+
+Let *T*: R<sup>n</sup> → R<sup>m</sup> be a linear transformation, and let *A* be the standard matrix for *T*. Then:\
+a. *T* maps R<sup>n</sup> onto R<sup>m</sup> if and only if the columns of *A* span R<sup>m</sup>.\
+b. *T* is one-to-one if and only if the columns of *A* are linearly independent.
+
+
+## 2.1 Matrix Operations
+
+If *A* is an *m* x *n* matrix - that is, a matrix with *m* rows and *n* columns - then the scalar entry in the *i*th row and the *j*th column of *A* is denoted by *a<sub>ij</sub>* and is called the (*i*, *j*)-entry of *A*.
+
+Each column of *A* is a list of *m* real numbers, which identifies a vector in R<sup>m</sup>. Often, these columns are denoted by **a**<sub>1</sub>, ..., **a**<sub>n</sub>, and matrix *A* is written as *A* = [ **a**<sub>1</sub> **a**<sub>2</sub> ... **a**<sub>n</sub> ]. Observe that the number *a<sub>ij</sub>* is the *i*th entry (from the top) of the *j*th column vector **a**<sub>j</sub>.
+
+The **diagonal entries** in an *m* x *n* matrix *A* = [ *a<sub>ij</sub>* ] are *a<sub>11</sub>*, *a<sub>22</sub>*, *a<sub>33</sub>*, ..., and they form the **main diagonal** of *A*.
+
+A **diagonal matrix** is a square *n* x *n* matrix whose nondiagonal entries are zero.
+
+An *m* x *n* matrix whose entries are all zero is a **zero matrix** and is written as **0**.
+
+We say that two matrices are **equal** if they have the same size (i.e., the same number of rows and the same number of columns) and if their corresponding columns are equal, which amounts to saying that their corresponding entries are equal.
+
+If *A* and *B* are *m* x *n* matrices, then the **sum** *A* + *B* is the *m* x *n* matrix whose columns are the sums of the corresponding columns in *A* and *B*. Since vector addition of the columns is done entrywise, each entry in *A* + *B* is the sum of the corresponding entries in *A* and *B*.\
+<sub>Note: The sum *A* + *B* is defined only when *A* and *B* are the same size.</sub>
+
+If *r* is a scalar and *A* is a matrix, then the **scalar multiple** *rA* is the matrix whose columns are *r* times the corresponding columns in *A*.
+
+Let *A*, *B*, and *C* be matrices of the same size, and let *r* and *s* be scalars.\
+a. *A* + *B* = *B* + *A*.\
+b. (*A* + *B*) + *C* = *A* + (*B* + *C*).\
+c. *A* + 0 = *A*.\
+d. *r*(*A* + *B*) = *rA* + *rB*.\
+e. (*r* + *s*)*A* = *rA* + *sA*.\
+f. *r*(*sA*) = (*rs*)*A*.
+
+If *A* is an *m* x *n* matrix, and if *B* is an *n* x *p* matrix with columns **b**<sub>1</sub>, ..., **b**<sub>p</sub>, then the product *AB* is the *m* x *p* matrix whose columns are *A***b**<sub>1</sub>, ..., *A***b**<sub>p</sub>. That is, *AB* = *A*[ **b**<sub>1</sub> **b**<sub>2</sub> ... **b**<sub>p</sub> ] = [ *A***b**<sub>1</sub> *A***b**<sub>2</sub> ... *A***b**<sub>p</sub> ].\
+<sub>Note: *AB* has the same number of rows as *A* and the same number of columns as *B*.</sub>
+
+Each column of *AB* is a linear combination of the columns of *A* using weights from the corresponding column of *B*.
+
+**Row Column Rule for Computing *AB***\
+If the product *AB* is defined, then the entry in row *i* and column *j* of *AB* is the sum of the products of corresponding entries from row *i* of *A* and column *j* of *B*. If (*AB*)<sub>*ij*</sub> denotes the (*i*, *j*)-entry in *AB*, and if *A* is an *m* x *n* matrix, then (*AB*)<sub>*ij*</sub> = *a*<sub>*i*1</sub>*b*<sub>1*j*</sub> + *a*<sub>*i*2</sub>*b*<sub>2*j*</sub> + ... + *a*<sub>*in*</sub>*b*<sub>*nj*</sub>.
+
+Let row<sub>*i*</sub>(*A*) denote the *i*th row of a matrix *A*. Then row<sub>*i*</sub>(*AB*) = row<sub>*i*</sub>(*A*) · *B*.
+
+Let *A* be an *m* x *n* matrix, and let *B* and *C* have sizes for which the indicated sums and products are defined.\
+a. *A*(*BC*) = (*AB*)*C*. (associative law of multiplication)\
+b. *A*(*B* + *C*) = *AB* + *AC*. (left distributive law)\
+c. (*B* + *C*)*A* = *BA* + *CA*. (right distributive law)\
+d. *r*(*AB*) = (*rA*)*B* = *A*(*rB*). (for any scalar *r*)\
+e. *I<sub>m</sub>A* = *A* = *AI<sub>n</sub>*. (identity for matrix multiplication)
+
+**Warnings**
+1. In general, *AB* is *not* equal to *BA*.
+2. The cancellation laws do *not* hold for matrix multiplication. That is, if *AB* = *AC*, then it is *not* true in general that *B* = *C*.
+3. If a product *AB* is the zero matrix, you *cannot* conclude in general that either *A* = 0 or *B* = 0.
+
+If *A* is an *n* x *n* matrix and if *k* is a positive integer, then *A<sup>k</sup>* denotes the product of *k* copies of *A*.
+
+If *A* is nonzero and if **x** is in R<sup>n</sup>, then *A*<sup>*k*</sup>**x** is the result of left-multiplying **x** by *A* repeatedly *k* times. if *k* = **0**, then *A*<sup>**0**</sup>**x** should be **x** itself. Thus *A*<sup>**0**</sup> is interpreted as the identity matrix.
+
+Given an *m* x *n* matrix *A*, the **transpose** of *A* is the *n* x *m* matrix, denoted by *A*<sup>*T*</sup>, whose columns are formed from the corresponding rows of *A*.
+
+Let *A* and *B* denote matrices whose sizes are appropriate for the following sums and products.\
+a. (*A*<sup>*T*</sup>)<sup>*T*</sup> = *A*.\
+b. (*A* + *B*)<sup>*T*</sup> = *A*<sup>*T*</sup> + *B*<sup>*T*</sup>.\
+c. For any scalar *r*, (*rA*)<sup>*T*</sup> = *rA*<sup>*T*</sup>.\
+d. (*AB*)<sup>*T*</sup> = *B*<sup>*T*</sup>*A*<sup>*T*</sup>.\
+<sub>Note: The transpose of a product of matrices equals the product of their transposes in the *reverse* order.</sub>
+
+
+## 2.2 The Inverse of Matrices
+
+An *n* x *n* matrix *A* is said to be **invertible** if there is an *n* x *n* matrix *C* such that *CA* = *I* and *AC* = *I* where *I* = *I*<sub>*n*</sub>, the *n* x *n* identity matrix. This unique inverse is denoted by *A*<sup>-1</sup>, so that *A*<sup>-1</sup>*A* = *I* and *AA*<sup>-1</sup> = *I*.
+
+A matrix that is *not* invertible is sometimes called a **singular matrix**, and an invertible matrix is called a **nonsingular matrix**.
+
+Let *A* be a 2 x 2 matrix with elements *a*, *b*, *c*, and *d*. The **determinant** of *A*, denoted by det *A*, is the quantity *ad* - *bc*. Matrix *A* is invertible if and only if det *A* is *not* equal to 0.
+
+If *A* is an invertible *n* x *n* matrix, then for each **b** in R<sup>n</sup>, the equation *A***x** = **b** has the unique solution **x** = *A*<sup>-1</sup>**b**.
+
+If *A* is an invertible matrix, then *A*<sup>-1</sup> is invertible and (*A*<sup>-1</sup>)<sup>-1</sup> = *A*.
+
+If *A* and *B* are *n* x *n* invertible matrices, then so is *AB*, and the inverse of *AB* is the product of the inverses of *A* and *B* in the *reverse* order. That is, (*AB*)<sup>-1</sup> = *B*<sup>-1</sup>*A*<sup>-1</sup>.
+
+If *A* is an invertible matrix, then so is *A*<sup>*T*</sup>, and the inverse of *A*<sup>*T*</sup> is the transpose of *A*<sup>-1</sup>. That is, (*A*<sup>*T*</sup>)<sup>-1</sup> = (*A*<sup>-1</sup>)<sup>*T*</sup>.
+
+An **elementary matrix** is one that is obtained by performing a single elementary row operation on an identity matrix.
+
+If an elementary row operation is performed on an *m* x *n* matrix *A*, the resulting matrix can be written as *EA*, where the *m* x *n* matrix *E* is created by performing the same row operation on *I*<sub>*m*</sup>.
+
+Each elementary matrix *E* is invertible. The inverse of *E* is the elementary matrix of the same type that transforms *E* back into *I*.
+
+An *n* x *n* matrix *A* is invertible if and only if *A* is row equivalent to *I*<sub>*n*</sub>, and in this case, any sequence of elementary row operations that reduces *A* to *I*<sub>*n*</sub> also transforms *I*<sub>*n*</sub> into *A*<sup>-1</sup>.
 
 
 ## 2.3 Characterizations of Invertible Matrices
